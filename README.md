@@ -4,221 +4,84 @@
 
 
     
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+                
+<div align="center">
 
-<title>Pink Worm Game</title>
+<svg width="500" height="220" viewBox="0 0 500 220"
+     xmlns="http://www.w3.org/2000/svg">
 
-<style>
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ffe6f1;
-    font-family: Arial, sans-serif;
-}
+<rect width="500" height="220" rx="25" fill="#fff0f7"/>
 
-.game {
-    text-align: center;
-}
+<text x="250" y="40"
+      text-anchor="middle"
+      font-family="Arial"
+      font-size="24"
+      fill="#ff4f9a">
+  Pink Worm
+</text>
 
-h1 {
-    color: #ff4f9a;
-    margin-bottom: 10px;
-}
+<!-- food -->
+<circle cx="430" cy="125" r="7" fill="#ff3f91">
+  <animate
+    attributeName="r"
+    values="7;10;7"
+    dur="0.8s"
+    repeatCount="indefinite"/>
+</circle>
 
-canvas {
-    display: block;
-    background: white;
-    border: 4px solid #ff8fbd;
-    border-radius: 15px;
-}
+<!-- worm -->
+<g>
 
-p {
-    color: #777;
-}
-</style>
-</head>
+<!-- body -->
+<circle cx="100" cy="125" r="17" fill="#ff9ac6">
+  <animate
+    attributeName="cx"
+    values="100;150;200;250;300;350;400;350;300;250;200;150;100"
+    dur="6s"
+    repeatCount="indefinite"/>
+</circle>
 
-<body>
+<circle cx="125" cy="125" r="18" fill="#ff79b1">
+  <animate
+    attributeName="cx"
+    values="125;175;225;275;325;375;425;375;325;275;225;175;125"
+    dur="6s"
+    repeatCount="indefinite"/>
+</circle>
 
-<div class="game">
+<!-- head -->
+<circle cx="150" cy="125" r="20" fill="#ff4f9a">
+  <animate
+    attributeName="cx"
+    values="150;200;250;300;350;400;450;400;350;300;250;200;150"
+    dur="6s"
+    repeatCount="indefinite"/>
+</circle>
 
-<h1>Pink Worm</h1>
+<!-- eyes -->
+<g>
+<circle cx="143" cy="119" r="3" fill="white"/>
+<circle cx="157" cy="119" r="3" fill="white"/>
 
-<canvas id="canvas" width="400" height="400"></canvas>
+<circle cx="143" cy="119" r="1.5" fill="#222"/>
+<circle cx="157" cy="119" r="1.5" fill="#222"/>
 
-<p>Use ↑ ↓ ← → to move</p>
+<animateTransform
+attributeName="transform"
+type="translate"
+values="0 0;50 0;100 0;150 0;200 0;250 0;300 0;250 0;200 0;150 0;100 0;50 0;0 0"
+dur="6s"
+repeatCount="indefinite"/>
+</g>
+
+</g>
+
+<!-- little ground -->
+<path d="M50 155 Q100 150 150 155 T250 155 T350 155 T450 155"
+      fill="none"
+      stroke="#ffc1dc"
+      stroke-width="3"/>
+
+</svg>
 
 </div>
-
-<script>
-
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-
-const box = 20;
-
-let worm = [
-    {x: 200, y: 200},
-    {x: 180, y: 200},
-    {x: 160, y: 200}
-];
-
-let food = {
-    x: Math.floor(Math.random() * 20) * box,
-    y: Math.floor(Math.random() * 20) * box
-};
-
-let direction = "RIGHT";
-
-document.addEventListener("keydown", function(e) {
-
-    if (e.key === "ArrowUp" && direction !== "DOWN")
-        direction = "UP";
-
-    if (e.key === "ArrowDown" && direction !== "UP")
-        direction = "DOWN";
-
-    if (e.key === "ArrowLeft" && direction !== "RIGHT")
-        direction = "LEFT";
-
-    if (e.key === "ArrowRight" && direction !== "LEFT")
-        direction = "RIGHT";
-});
-
-function draw() {
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    let head = {
-        x: worm[0].x,
-        y: worm[0].y
-    };
-
-    if (direction === "UP")
-        head.y -= box;
-
-    if (direction === "DOWN")
-        head.y += box;
-
-    if (direction === "LEFT")
-        head.x -= box;
-
-    if (direction === "RIGHT")
-        head.x += box;
-
-    if (
-        head.x < 0 ||
-        head.x >= canvas.width ||
-        head.y < 0 ||
-        head.y >= canvas.height
-    ) {
-        reset();
-        return;
-    }
-
-    worm.unshift(head);
-
-    if (
-        head.x === food.x &&
-        head.y === food.y
-    ) {
-
-        food = {
-            x: Math.floor(Math.random() * 20) * box,
-            y: Math.floor(Math.random() * 20) * box
-        };
-
-    } else {
-
-        worm.pop();
-
-    }
-
-    drawFood();
-    drawWorm();
-}
-
-function drawWorm() {
-
-    worm.forEach(function(part, index) {
-
-        ctx.beginPath();
-
-        ctx.arc(
-            part.x + 10,
-            part.y + 10,
-            9,
-            0,
-            Math.PI * 2
-        );
-
-        ctx.fillStyle =
-            index === 0 ? "#ff3f91" : "#ff8fbd";
-
-        ctx.fill();
-
-        if (index === 0) {
-
-            ctx.fillStyle = "white";
-
-            ctx.beginPath();
-            ctx.arc(part.x + 6, part.y + 7, 3, 0, Math.PI * 2);
-            ctx.fill();
-
-            ctx.beginPath();
-            ctx.arc(part.x + 14, part.y + 7, 3, 0, Math.PI * 2);
-            ctx.fill();
-
-            ctx.fillStyle = "#222";
-
-            ctx.beginPath();
-            ctx.arc(part.x + 6, part.y + 7, 1.5, 0, Math.PI * 2);
-            ctx.fill();
-
-            ctx.beginPath();
-            ctx.arc(part.x + 14, part.y + 7, 1.5, 0, Math.PI * 2);
-            ctx.fill();
-        }
-    });
-}
-
-function drawFood() {
-
-    ctx.beginPath();
-
-    ctx.arc(
-        food.x + 10,
-        food.y + 10,
-        6,
-        0,
-        Math.PI * 2
-    );
-
-    ctx.fillStyle = "#ff4f91";
-    ctx.fill();
-}
-
-function reset() {
-
-    worm = [
-        {x: 200, y: 200},
-        {x: 180, y: 200},
-        {x: 160, y: 200}
-    ];
-
-    direction = "RIGHT";
-}
-
-setInterval(draw, 120);
-
-</script>
-
-</body>
-</html>
