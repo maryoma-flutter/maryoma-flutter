@@ -2,10 +2,6 @@
   <img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&size=35&pause=1000&color=8FD3FF&center=true&vCenter=true&width=700&lines=Hi,+I'm+Maryam+Hisham" />
 </p>
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&size=35&pause=1000&color=8FD3FF&center=true&vCenter=true&width=700&lines=Hi,+I'm+Maryam+Hisham" />
-</p>
-
 <span style="color: purple;">
 
 ### Developer Tips
@@ -17,7 +13,3 @@
 - Version control is key: Commit often and write meaningful commit messages.
 
 </span>
-
-    
-                
-    
