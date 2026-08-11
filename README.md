@@ -3,59 +3,66 @@
 </p>
 
 
-<!DOCTYPE html>
+    
+        <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Worm Game</title>
+
+<title>Pink Worm Game</title>
 
 <style>
-    body {
-        margin: 0;
-        background: #ffeaf4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        font-family: Arial;
-    }
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffe6f1;
+    font-family: Arial, sans-serif;
+}
 
-    .game {
-        text-align: center;
-    }
+.game {
+    text-align: center;
+}
 
-    h2 {
-        color: #ff69a6;
-    }
+h1 {
+    color: #ff4f9a;
+    margin-bottom: 10px;
+}
 
-    canvas {
-        background: #fff;
-        border: 4px solid #ff8fbd;
-        border-radius: 15px;
-        box-shadow: 0 8px 20px #0002;
-    }
+canvas {
+    display: block;
+    background: white;
+    border: 4px solid #ff8fbd;
+    border-radius: 15px;
+}
 
-    p {
-        color: #777;
-    }
+p {
+    color: #777;
+}
 </style>
 </head>
 
 <body>
 
 <div class="game">
-    <h2>Worm Game</h2>
-    <canvas id="game" width="400" height="400"></canvas>
-    <p>Use the arrow keys to move</p>
+
+<h1>Pink Worm</h1>
+
+<canvas id="canvas" width="400" height="400"></canvas>
+
+<p>Use ↑ ↓ ← → to move</p>
+
 </div>
 
 <script>
 
-const canvas = document.getElementById("game");
+const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-const size = 20;
+const box = 20;
 
 let worm = [
     {x: 200, y: 200},
@@ -64,64 +71,119 @@ let worm = [
 ];
 
 let food = {
-    x: Math.floor(Math.random() * 20) * size,
-    y: Math.floor(Math.random() * 20) * size
+    x: Math.floor(Math.random() * 20) * box,
+    y: Math.floor(Math.random() * 20) * box
 };
 
-let dx = size;
-let dy = 0;
+let direction = "RIGHT";
 
-document.addEventListener("keydown", move);
+document.addEventListener("keydown", function(e) {
 
-function move(e) {
+    if (e.key === "ArrowUp" && direction !== "DOWN")
+        direction = "UP";
 
-    if (e.key === "ArrowUp" && dy === 0) {
-        dx = 0;
-        dy = -size;
+    if (e.key === "ArrowDown" && direction !== "UP")
+        direction = "DOWN";
+
+    if (e.key === "ArrowLeft" && direction !== "RIGHT")
+        direction = "LEFT";
+
+    if (e.key === "ArrowRight" && direction !== "LEFT")
+        direction = "RIGHT";
+});
+
+function draw() {
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    let head = {
+        x: worm[0].x,
+        y: worm[0].y
+    };
+
+    if (direction === "UP")
+        head.y -= box;
+
+    if (direction === "DOWN")
+        head.y += box;
+
+    if (direction === "LEFT")
+        head.x -= box;
+
+    if (direction === "RIGHT")
+        head.x += box;
+
+    if (
+        head.x < 0 ||
+        head.x >= canvas.width ||
+        head.y < 0 ||
+        head.y >= canvas.height
+    ) {
+        reset();
+        return;
     }
 
-    if (e.key === "ArrowDown" && dy === 0) {
-        dx = 0;
-        dy = size;
+    worm.unshift(head);
+
+    if (
+        head.x === food.x &&
+        head.y === food.y
+    ) {
+
+        food = {
+            x: Math.floor(Math.random() * 20) * box,
+            y: Math.floor(Math.random() * 20) * box
+        };
+
+    } else {
+
+        worm.pop();
+
     }
 
-    if (e.key === "ArrowLeft" && dx === 0) {
-        dx = -size;
-        dy = 0;
-    }
-
-    if (e.key === "ArrowRight" && dx === 0) {
-        dx = size;
-        dy = 0;
-    }
+    drawFood();
+    drawWorm();
 }
 
 function drawWorm() {
 
-    worm.forEach((part, index) => {
+    worm.forEach(function(part, index) {
 
         ctx.beginPath();
+
         ctx.arc(
-            part.x + size / 2,
-            part.y + size / 2,
+            part.x + 10,
+            part.y + 10,
             9,
             0,
             Math.PI * 2
         );
 
-        ctx.fillStyle = index === 0 ? "#ff4f9a" : "#ff8fbd";
+        ctx.fillStyle =
+            index === 0 ? "#ff3f91" : "#ff8fbd";
+
         ctx.fill();
 
         if (index === 0) {
 
-            ctx.fillStyle = "#222";
+            ctx.fillStyle = "white";
 
             ctx.beginPath();
-            ctx.arc(part.x + 7, part.y + 7, 2, 0, Math.PI * 2);
+            ctx.arc(part.x + 6, part.y + 7, 3, 0, Math.PI * 2);
             ctx.fill();
 
             ctx.beginPath();
-            ctx.arc(part.x + 14, part.y + 7, 2, 0, Math.PI * 2);
+            ctx.arc(part.x + 14, part.y + 7, 3, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = "#222";
+
+            ctx.beginPath();
+            ctx.arc(part.x + 6, part.y + 7, 1.5, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(part.x + 14, part.y + 7, 1.5, 0, Math.PI * 2);
             ctx.fill();
         }
     });
@@ -132,61 +194,18 @@ function drawFood() {
     ctx.beginPath();
 
     ctx.arc(
-        food.x + size / 2,
-        food.y + size / 2,
-        7,
+        food.x + 10,
+        food.y + 10,
+        6,
         0,
         Math.PI * 2
     );
 
-    ctx.fillStyle = "#ff4f9a";
+    ctx.fillStyle = "#ff4f91";
     ctx.fill();
 }
 
-function gameLoop() {
-
-    let head = {
-        x: worm[0].x + dx,
-        y: worm[0].y + dy
-    };
-
-    if (
-        head.x < 0 ||
-        head.x >= canvas.width ||
-        head.y < 0 ||
-        head.y >= canvas.height
-    ) {
-        restart();
-        return;
-    }
-
-    for (let part of worm) {
-        if (head.x === part.x && head.y === part.y) {
-            restart();
-            return;
-        }
-    }
-
-    worm.unshift(head);
-
-    if (head.x === food.x && head.y === food.y) {
-
-        food = {
-            x: Math.floor(Math.random() * 20) * size,
-            y: Math.floor(Math.random() * 20) * size
-        };
-
-    } else {
-        worm.pop();
-    }
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    drawFood();
-    drawWorm();
-}
-
-function restart() {
+function reset() {
 
     worm = [
         {x: 200, y: 200},
@@ -194,11 +213,10 @@ function restart() {
         {x: 160, y: 200}
     ];
 
-    dx = size;
-    dy = 0;
+    direction = "RIGHT";
 }
 
-setInterval(gameLoop, 120);
+setInterval(draw, 120);
 
 </script>
 
