@@ -12,8 +12,5 @@
 
 
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=maryoma-flutter&show_icons=true&theme=radical" alt="Maryoma's GitHub Stats" />
-</p>
+[![Maryoma's GitHub Stats](https://github-readme-stats.vercel.app/api?username=maryoma-flutter&show_icons=true&theme=radical)](https://github.com/maryoma-flutter)
 
- 
