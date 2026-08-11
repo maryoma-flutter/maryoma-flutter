@@ -1,16 +1,14 @@
-## Hi there 👋
+```csharp
+using System;
 
-<!--
-**maryoma-flutter/maryoma-flutter** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+namespace MyProfile
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello, World! 👋 I'm Mariouma.");
+            Console.WriteLine("Welcome to my GitHub profile! 💻🚀");
+        }
+    }
+}
