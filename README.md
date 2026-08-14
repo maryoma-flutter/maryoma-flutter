@@ -18,3 +18,10 @@
     </a>
   </h1>
 </div>
+
+
+
+
+<p align="center">
+  <img src="./maryam-animation.svg" width="700">
+</p>
