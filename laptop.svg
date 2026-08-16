@@ -1,0 +1,236 @@
+<svg width="700" height="430" viewBox="0 0 700 430" xmlns="http://www.w3.org/2000/svg">
+
+<rect width="700" height="430" fill="transparent"/>
+
+<!-- Screen opening -->
+<g transform="translate(100 45)">
+
+<g transform="translate(0 285) scale(1 0.02)">
+<rect x="0" y="-285"
+width="500"
+height="285"
+rx="18"
+fill="#151922"
+stroke="#8FD3FF"
+stroke-width="5">
+
+<animateTransform
+attributeName="transform"
+type="scale"
+from="1 0.02"
+to="1 1"
+begin="0s"
+dur="1.4s"
+fill="freeze"/>
+</rect>
+
+<rect x="25" y="-250"
+width="450"
+height="225"
+rx="8"
+fill="#080B10"/>
+</g>
+
+<!-- Screen -->
+<rect x="0" y="0"
+width="500"
+height="285"
+rx="18"
+fill="none"
+stroke="#8FD3FF"
+stroke-width="5"
+opacity="0">
+
+<animate
+attributeName="opacity"
+from="0"
+to="1"
+begin="1.4s"
+dur="0.5s"
+fill="freeze"/>
+</rect>
+
+<!-- Camera -->
+<circle cx="250" cy="15" r="3" fill="#8FD3FF" opacity="0">
+<animate
+attributeName="opacity"
+from="0"
+to="1"
+begin="1.8s"
+dur="0.3s"
+fill="freeze"/>
+</circle>
+
+<!-- Screen glow -->
+<rect x="25" y="35"
+width="450"
+height="225"
+rx="8"
+fill="#080B10"
+opacity="0">
+
+<animate
+attributeName="opacity"
+from="0"
+to="1"
+begin="1.8s"
+dur="0.8s"
+fill="freeze"/>
+</rect>
+
+<!-- Code -->
+
+<g font-family="monospace"
+font-size="18"
+fill="#8FD3FF">
+
+<text x="50" y="75"
+opacity="0">
+using System;
+<animate
+attributeName="opacity"
+from="0"
+to="1"
+begin="2.7s"
+dur="0.4s"
+fill="freeze"/>
+</text>
+
+<text x="50" y="110"
+opacity="0">
+class Maryam
+<animate
+attributeName="opacity"
+from="0"
+to="1"
+begin="3.4s"
+dur="0.4s"
+fill="freeze"/>
+</text>
+
+<text x="50" y="145"
+opacity="0">
+{
+<animate
+attributeName="opacity"
+from="0"
+to="1"
+begin="4.1s"
+dur="0.4s"
+fill="freeze"/>
+</text>
+
+<text x="75" y="180"
+opacity="0">
+Console.WriteLine("Hello");
+<animate
+attributeName="opacity"
+from="0"
+to="1"
+begin="4.8s"
+dur="0.4s"
+fill="freeze"/>
+</text>
+
+<text x="50" y="215"
+opacity="0">
+}
+<animate
+attributeName="opacity"
+from="0"
+to="1"
+begin="5.5s"
+dur="0.4s"
+fill="freeze"/>
+</text>
+
+<text x="50" y="245"
+opacity="0">
+Ready to code...
+<animate
+attributeName="opacity"
+from="0"
+to="1"
+begin="6.2s"
+dur="0.4s"
+fill="freeze"/>
+</text>
+
+</g>
+
+<!-- Keyboard -->
+
+<path d="M-45 300 L545 300 L600 345 L-100 345 Z"
+fill="#1D2330"
+stroke="#8FD3FF"
+stroke-width="4"
+opacity="0">
+
+<animate
+attributeName="opacity"
+from="0"
+to="1"
+begin="1.4s"
+dur="0.5s"
+fill="freeze"/>
+</path>
+
+<!-- Keyboard lines -->
+
+<g stroke="#8FD3FF"
+stroke-width="2"
+opacity="0">
+
+<line x1="-30" y1="315" x2="530" y2="315"/>
+<line x1="-55" y1="330" x2="550" y2="330"/>
+
+<animate
+attributeName="opacity"
+from="0"
+to="0.6"
+begin="1.8s"
+dur="0.5s"
+fill="freeze"/>
+</g>
+
+<!-- Touchpad -->
+
+<rect x="220"
+y="318"
+width="160"
+height="20"
+rx="5"
+fill="#11151D"
+stroke="#8FD3FF"
+stroke-width="2"
+opacity="0">
+
+<animate
+attributeName="opacity"
+from="0"
+to="1"
+begin="1.8s"
+dur="0.5s"
+fill="freeze"/>
+</rect>
+
+</g>
+
+<!-- Cursor -->
+
+<rect x="285"
+y="325"
+width="3"
+height="20"
+fill="#8FD3FF"
+opacity="0">
+
+<animate
+attributeName="opacity"
+values="0;1;0"
+begin="6.6s"
+dur="0.8s"
+repeatCount="indefinite"/>
+</rect>
+
+</svg>
