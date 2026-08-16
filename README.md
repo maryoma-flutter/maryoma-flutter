@@ -31,3 +31,8 @@
 <p align="center">
   <img src="./maryam-code-editor.gif" width="700">
 </p>
+
+
+<p align="center">
+  <img src="./laptop.svg" width="700">
+</p>
