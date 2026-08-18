@@ -36,3 +36,26 @@
 <p align="center">
   <img src="./laptop.svg" width="700">
 </p>
+
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=maryoma-flutter&style=flat-square&color=blue" alt="Profile Views"/>
+</div>
+
+### 💻 Terminal Profile
+
+```text
+visitor@maryoma-pc:~$ whoami
+> Maryoma Hisham | Mobile App Developer (Flutter & Dart)
+
+visitor@maryoma-pc:~$ cat skills.json
+{
+  "Mobile": ["Flutter", "Dart"],
+  "Languages": ["C#", "C++", "Java", "HTML"],
+  "Database & Web": ["SQL", "Database Management"]
+}
+
+visitor@maryoma-pc:~$ status
+> Currently building mobile apps & interning at OrbScope
+
+visitor@maryoma-pc:~$ echo "Thanks for stopping by!"
