@@ -64,3 +64,8 @@ visitor@maryoma-pc:~$ echo "Thanks for stopping by!"
 <p align="center">
   <img src="./terminal.svg" width="700">
 </p>
+
+
+<div align="center">
+  <img src="./cloud_code_rain.gif" width="600">
+</div>
