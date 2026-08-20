@@ -59,3 +59,8 @@ visitor@maryoma-pc:~$ status
 > Currently building mobile apps & interning at OrbScope
 
 visitor@maryoma-pc:~$ echo "Thanks for stopping by!"
+
+
+<p align="center">
+  <img src="./terminal.svg" width="700">
+</p>
