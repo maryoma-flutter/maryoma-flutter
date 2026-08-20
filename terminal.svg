@@ -1,0 +1,158 @@
+<svg width="700" height="380" viewBox="0 0 700 380"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect width="700" height="380" rx="20" fill="#0d1117"/>
+
+<!-- Terminal window -->
+<rect x="30" y="30"
+width="640" height="320"
+rx="14"
+fill="#0d1117"
+stroke="#58a6ff"
+stroke-width="3"/>
+
+<!-- Header -->
+<rect x="30" y="30"
+width="640" height="45"
+rx="14"
+fill="#161b22"/>
+
+<!-- Window buttons -->
+<circle cx="58" cy="52" r="7" fill="#ff5f56"/>
+<circle cx="82" cy="52" r="7" fill="#ffbd2e"/>
+<circle cx="106" cy="52" r="7" fill="#27c93f"/>
+
+<!-- Terminal title -->
+<text x="350" y="58"
+text-anchor="middle"
+font-family="monospace"
+font-size="16"
+fill="#8b949e">
+maryam@github:~
+</text>
+
+<!-- Command 1 -->
+<text x="60" y="115"
+font-family="monospace"
+font-size="18"
+fill="#58a6ff"
+opacity="0">
+
+&gt; whoami
+
+<animate
+attributeName="opacity"
+from="0"
+to="1"
+begin="1s"
+dur="0.5s"
+fill="freeze"/>
+</text>
+
+<!-- Result -->
+<text x="60" y="145"
+font-family="monospace"
+font-size="17"
+fill="#c9d1d9"
+opacity="0">
+
+Maryam Hisham
+
+<animate
+attributeName="opacity"
+from="0"
+to="1"
+begin="2s"
+dur="0.5s"
+fill="freeze"/>
+</text>
+
+<!-- Command 2 -->
+<text x="60" y="185"
+font-family="monospace"
+font-size="18"
+fill="#58a6ff"
+opacity="0">
+
+&gt; skills
+
+<animate
+attributeName="opacity"
+from="0"
+to="1"
+begin="2.8s"
+dur="0.5s"
+fill="freeze"/>
+</text>
+
+<!-- Skills -->
+<text x="60" y="215"
+font-family="monospace"
+font-size="16"
+fill="#c9d1d9"
+opacity="0">
+
+Dart  |  Flutter  |  C#  |  C++  |  HTML
+
+<animate
+attributeName="opacity"
+from="0"
+to="1"
+begin="3.6s"
+dur="0.5s"
+fill="freeze"/>
+</text>
+
+<!-- Command 3 -->
+<text x="60" y="255"
+font-family="monospace"
+font-size="18"
+fill="#58a6ff"
+opacity="0">
+
+&gt; status
+
+<animate
+attributeName="opacity"
+from="0"
+to="1"
+begin="4.5s"
+dur="0.5s"
+fill="freeze"/>
+</text>
+
+<!-- Status -->
+<text x="60" y="285"
+font-family="monospace"
+font-size="17"
+fill="#27c93f"
+opacity="0">
+
+Maryam.exe  |  Ready to code
+
+<animate
+attributeName="opacity"
+from="0"
+to="1"
+begin="5.3s"
+dur="0.5s"
+fill="freeze"/>
+</text>
+
+<!-- Cursor -->
+<rect x="60" y="305"
+width="10"
+height="20"
+fill="#58a6ff"
+opacity="0">
+
+<animate
+attributeName="opacity"
+values="0;1;0"
+dur="0.8s"
+begin="6s"
+repeatCount="indefinite"/>
+
+</rect>
+
+</svg>
