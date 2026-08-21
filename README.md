@@ -51,7 +51,3 @@ visitor@maryoma-pc:~$ status
 > Currently building mobile apps & interning at OrbScope
 
 visitor@maryoma-pc:~$ echo "Thanks for stopping by!"
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/maryoma-flutter/maryoma-flutter/main/cloud_code_rain.gif" width="600">
-</p>
