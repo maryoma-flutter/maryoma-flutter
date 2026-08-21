@@ -38,10 +38,6 @@
   <img src="https://github.com/maryoma-flutter/maryoma-flutter/blob/main/cloud_code_rain.gif?raw=true" width="600">
 </p>
 
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=maryoma-flutter&style=flat-square&color=blue" alt="Profile Views"/>
-</div>
-
 ### 💻 Terminal Profile
 
 ```text
