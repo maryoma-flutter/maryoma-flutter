@@ -38,6 +38,10 @@
   <img src="https://github.com/maryoma-flutter/maryoma-flutter/blob/main/cloud_code_rain.gif?raw=true" width="600">
 </p>
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&size=32&pause=800&color=FFB6D9&center=true&vCenter=true&width=700&lines=Ben+Aslan+burcu+bir+kad%C4%B1n%C4%B1m." />
+</p>
+
 ### 💻 Terminal Profile
 
 ```text
