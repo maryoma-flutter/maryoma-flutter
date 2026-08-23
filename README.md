@@ -2,9 +2,7 @@
   <img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&size=35&pause=1000&color=8FD3FF&center=true&vCenter=true&width=700&lines=Hi,+I'm+Maryam+Hisham" />
 </p>
 
-<p align="center">
-font=Arial&size=28&duration=80&pause=1000&color=FFB6D9&center=true&vCenter=true&width=900&lines=♡+Kalbim+ve+ruhum+tek+bir+kişiye+ait%2C+o+da+Firavun'um.+♡" />
-</p>
+
 ### Developer Tips
 
 > - Write clean code: Always prioritize readability and maintainability.
