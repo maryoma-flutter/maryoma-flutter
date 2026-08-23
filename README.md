@@ -3,9 +3,8 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&size=28&duration=80&pause=1000&color=FFB6D9&center=true&vCenter=true&width=900&lines=♡+Kalbim+ve+ruhum+tek+bir+kişiye+ait%2C+o+da+Firavun'um.+♡" />
+  <img src="https://readme-typing-svg.demolab.com?font=Arial&size=28&duration=80&pause=1000&color=FFB6D9&center=true&vCenter=true&width=900&lines=♡+Kalbim+ve+ruhum+tek+bir+kişiye+ait%2C+o+da+Firavun'um.+♡" />
 </p>
-
 ### Developer Tips
 
 > - Write clean code: Always prioritize readability and maintainability.
