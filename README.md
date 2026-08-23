@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&size=32&pause=800&color=FFC1DC&center=true&vCenter=true&width=700&lines=♡+Kalbim+ve+ruhum+tek+bir+kişiye+ait%2C+o+da+Firavun'um.+♡" />
+  <img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&size=32&pause=800&color=FFC1DC&center=true&vCenter=true&width=900&lines=%E2%99%A1%20Kalbim%20ve%20ruhum%20tek%20bir%20ki%C5%9Fiye%20ait%2C%20o%20da%20Firavun%27um.%20%E2%99%A1" />
 </p>
 
 
