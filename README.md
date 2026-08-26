@@ -51,6 +51,12 @@
   <img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&size=32&pause=800&color=FFB6D9&center=true&vCenter=true&width=700&lines=Ben+Aslan+burcu+bir+kad%C4%B1n%C4%B1m." />
 </p>
 
+
+<p align="center">
+  <img src="coding_cat_ball.gif" width="850">
+</p>
+
+
 ### 💻 Terminal Profile
 
 ```text
