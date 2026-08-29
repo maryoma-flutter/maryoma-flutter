@@ -19,6 +19,26 @@
 > - Learn continuously: The tech world evolves rapidly, so keep exploring new tools.
 > - Version control is key: Commit often and write meaningful commit messages.
 
+
+<div align="center">
+
+<a href="https://youtu.be/iovlUtMzM-c?si=96Ur_-fqIHKagscv">
+  <img
+    src="./music-player.png"
+    width="900"
+    alt="Music Player - Youm El Raheel"
+  />
+</a>
+
+<br><br>
+
+<p>
+  ♫ Now Playing — Youm El Raheel · Assala Nasri
+</p>
+
+</div>
+
+
 <div align="center">
   <h1>
     <a href="https://github.com/maryoma-flutter">
