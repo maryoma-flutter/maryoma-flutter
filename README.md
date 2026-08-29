@@ -39,6 +39,16 @@
 </div>
 
 
+<p align="center">
+  <img
+    src="./developer-dashboard.gif"
+    width="950"
+    alt="Developer Dashboard"
+  />
+</p>
+
+
+
 <div align="center">
   <h1>
     <a href="https://github.com/maryoma-flutter">
