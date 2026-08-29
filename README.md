@@ -41,7 +41,7 @@
 
 <p align="center">
   <img
-    src="./developer-dashboard.gif"
+    src="https://raw.githubusercontent.com/maryoma-flutter/maryoma-flutter/main/developer-dashboard.gif"
     width="950"
     alt="Developer Dashboard"
   />
