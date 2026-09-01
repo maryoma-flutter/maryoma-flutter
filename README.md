@@ -20,6 +20,12 @@
 > - Version control is key: Commit often and write meaningful commit messages.
 
 
+<p align="center">
+  <img src="./octopus-coder-animated.gif" width="100%">
+</p>
+``` [❶](code://python)
+
+
 <div align="center">
 
 <a href="https://youtu.be/iovlUtMzM-c?si=96Ur_-fqIHKagscv">
